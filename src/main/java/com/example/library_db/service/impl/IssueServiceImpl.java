@@ -81,7 +81,7 @@ public class IssueServiceImpl implements IssueService {
 
     @Override
     public List<BookIssue> getMemberIssues(Long memberId) {
-        return issueRepository.findByMemberId(memberId);
+        return issueRepository.findByMember_Id(memberId);
     }
 
     @Override
