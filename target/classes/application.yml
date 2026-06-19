@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: library-app
+
+  datasource:
+    url: jdbc:h2:mem:librarydb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ""
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+app:
+  jwt:
+    secret: "ZmFrZS1zZWNyZXQta2V5LWZvci1saWJyYXJ5LWFwcC1kZXYtb25seS1jaGFuZ2UtaW4tcHJvZA=="
+    expiration-ms: 86400000
